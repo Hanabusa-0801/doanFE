@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh toán</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/../assets/css/style.css" />
+  </head>
+  <body class="body-thanhtoan">
+    <!-- header -->
+    <div
+      class="container-fluid top-bar d-flex justify-content-between bg-light border-bottom"
+    >
+      <div class="icon-navbar mt-md-2 my-3">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+        <a href="#"><i class="bi bi-behance"></i></a>
+      </div>
+      <div class="user-links text-dark pt-2 pb-2 d-flex flex-wrap ms-auto">
+        <a href="dangnhap.html" type="button" class="nut m-2 d-none d-md-block"
+          ><i class="bi bi-person-fill"></i> Tài khoản</a
+        >
+        <a href="giohang.html" type="button" class="nut m-2 d-none d-md-block"
+          ><i class="bi bi-bag-fill"></i> Giỏ hàng</a
+        >
+      </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light sticky-top shadow-sm">
+      <div class="container-lg">
+        <!-- Logo -->
+        <a class="navbar-brand fs-2 fw-bold" href="home.php">
+          <span style="color: #f355a4">PK</span> Store
+        </a>
+
+        <!-- Button collapse -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <!-- Menu chính -->
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">TRANG CHỦ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="sanpham.html">SẢN PHẨM</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tacgia.html">TÁC GIẢ</a>
+            </li>
+
+            <!-- Hiển thị trên mobile -->
+            <li class="nav-item d-md-none">
+              <a class="nav-link fw-bold" href="dangnhap.html">TÀI KHOẢN</a>
+            </li>
+            <li class="nav-item d-md-none">
+              <a class="nav-link fw-bold" href="giohang.html">GIỎ HÀNG</a>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                THÊM
+              </a>
+              <ul class="dropdown-menu bg-light">
+                <li><a class="dropdown-item" href="lienhe.html">Liên hệ</a></li>
+                <li>
+                  <a class="dropdown-item" href="gioithieu.html">Giới thiệu</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    class="dropdown-item text-primary fw-semibold"
+                    href="lichsu.html"
+                  >
+                    📦 Lịch sử mua hàng
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Form tìm kiếm -->
+          <form class="d-flex ms-lg-3 mt-2 mt-lg-0" role="search">
+            <input
+              class="form-control"
+              type="search"
+              placeholder="Tìm kiếm sách..."
+              aria-label="Search"
+              style="border-radius: 20px; border-color: #f355a4"
+            />
+            <button
+              class="btn ms-2"
+              type="submit"
+              style="
+                background-color: #f355a4;
+                color: white;
+                border-radius: 20px;
+              "
+            >
+              🔍
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container checkout-container">
+      <h3 class="text-center mb-4 text-uppercase fw-bold text-dark">
+        Thanh Toán Đơn Hàng
+      </h3>
+
+      <!-- Nhập địa chỉ giao hàng -->
+      <div class="mb-4">
+        <h5 class="section-title">Nhập địa chỉ giao hàng</h5>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Họ và tên người nhận"
+            />
+          </div>
+          <div class="col-md-6">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Số điện thoại"
+            />
+          </div>
+          <div class="col-12">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Địa chỉ cụ thể (Số nhà, đường...)"
+            />
+          </div>
+          <div class="col-md-6">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Tỉnh/Thành phố"
+            />
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Quận/Huyện" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Phương thức vận chuyển -->
+      <div class="mb-4">
+        <h5 class="section-title">Phương thức vận chuyển</h5>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="shipping"
+            id="fast"
+            checked
+          />
+          <label class="form-check-label" for="fast"
+            >Giao hàng nhanh (2-3 ngày) - 30.000đ</label
+          >
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="shipping"
+            id="save"
+          />
+          <label class="form-check-label" for="save"
+            >Giao hàng tiết kiệm (4-6 ngày) - 20.000đ</label
+          >
+        </div>
+      </div>
+
+      <!-- Phương thức thanh toán -->
+      <div class="mb-4">
+        <h5 class="section-title">Phương thức thanh toán</h5>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="payment"
+            id="cod"
+            checked
+          />
+          <label class="form-check-label" for="cod"
+            >Thanh toán khi nhận hàng (COD)</label
+          >
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="payment"
+            id="bank"
+          />
+          <label class="form-check-label" for="bank"
+            >Chuyển khoản ngân hàng</label
+          >
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="payment"
+            id="momo"
+          />
+          <label class="form-check-label" for="momo"
+            >Ví MoMo / ZaloPay / VNPay</label
+          >
+        </div>
+      </div>
+
+      <!-- Kiểm tra lại đơn hàng -->
+      <div class="mb-4">
+        <h5 class="section-title">Kiểm tra lại đơn hàng</h5>
+        <table class="table align-middle">
+          <thead>
+            <tr>
+              <th>Sản phẩm</th>
+              <th class="text-center">Số lượng</th>
+              <th class="text-end">Thành tiền</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Perman - Cậu Bé Siêu Nhân - Tập 1</td>
+              <td class="text-center">1</td>
+              <td class="text-end">23.500 đ</td>
+            </tr>
+            <tr>
+              <td>Thám Tử Lừng Danh Conan - Tập 106</td>
+              <td class="text-center">1</td>
+              <td class="text-end">25.000 đ</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="order-summary">
+          <div class="d-flex justify-content-between">
+            <span>Tạm tính:</span>
+            <strong>48.500 đ</strong>
+          </div>
+          <div class="d-flex justify-content-between">
+            <span>Phí vận chuyển:</span>
+            <strong>30.000 đ</strong>
+          </div>
+          <div class="d-flex justify-content-between fs-5 mt-2">
+            <span>Tổng cộng:</span>
+            <strong class="text-danger">78.500 đ</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nút xác nhận -->
+      <div class="text-center">
+        <button class="btn btn-confirm px-5" onclick="confirmOrder()">
+          Xác nhận đặt hàng
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function confirmOrder() {
+        alert("🎉 Đặt hàng thành công! Cảm ơn bạn đã mua sắm.");
+        window.location.href = "index.html"; // Chuyển về trang chủ sau khi đặt hàng
+      }
+    </script>
+  </body>
+</html>
